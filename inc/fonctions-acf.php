@@ -25,16 +25,18 @@ add_action('acf/init', 'acf_bloc_gutenberg_equipe');
 // Affichage du bloc
 function acf_bloc_gutenberg_equipe_callback() {
 	// Affichage du html
+	
 	// Variables
 	$prenom = get_field('blocequipe_prenom');
 	$nom = get_field('blocequipe_nom');
 	$bio = get_field('blocequipe_bio');
 	$img_id = (int) get_field('blocequipe_photo');
-	$img = wp_get_attachment_image( $img_id, 'medium' );
+	$img = wp_get_attachment_image( $img_id, 'cuisinier' );
 	$email = get_field('blocequipe_email');
 	$site = get_field('blocequipe_site');
 	$back_color = get_field('blocequipe_arriere_plan');
 	$padding = get_field('blocequipe_marge_interne');
+
 	// Appel du fichier d'affichage
 	ob_start();
 	include plugin_dir_path(__DIR__) . 'view/view-bloc-equipe.php';

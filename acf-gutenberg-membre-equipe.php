@@ -26,4 +26,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // Fichier de functions pour ACF
-include_once plugin_dir_path( __FILE__ ) . 'lib/fonctions-acf.php';
+include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-acf.php';

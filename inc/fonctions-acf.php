@@ -3,12 +3,15 @@
  * Fichier pour la création de blocs Gutenberg avec ACF
  *
  */
+
 // Ajouter un bloc pour les pages
 // https://www.advancedcustomfields.com/resources/acf_register_block/
 function acf_bloc_gutenberg_equipe() {
+	
 	// vérifie si c'est la bonne version ACF ou si ACF est actif. Dans le cas contraire tout s'arrête. 
 	if ( ! function_exists('acf_register_block') )
 		return;
+	
 	// Enregistrement du bloc
 	acf_register_block(array(
 		'name' => 'membre-equipe',
@@ -22,9 +25,9 @@ function acf_bloc_gutenberg_equipe() {
 	));
 }
 add_action('acf/init', 'acf_bloc_gutenberg_equipe');
+
 // Affichage du bloc
 function acf_bloc_gutenberg_equipe_callback() {
-	// Affichage du html
 	
 	// Variables
 	$prenom = get_field('blocequipe_prenom');

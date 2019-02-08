@@ -1,18 +1,21 @@
 <?php
-/***
- * Fichier pour la création de blocs Gutenberg avec ACF
+/**
+ * Fonction pour la création de blocs Gutenberg avec ACF
  *
+ * @package acf-bloc-membres
+ * @author Grégoire Noyelle
+ * @since 1.0.0
+ * @link https://www.advancedcustomfields.com/resources/acf_register_block/
  */
-
-// Ajouter un bloc pour les pages
-// https://www.advancedcustomfields.com/resources/acf_register_block/
 function acf_bloc_gutenberg_equipe() {
 	
-	// vérifie si c'est la bonne version ACF ou si ACF est actif. Dans le cas contraire tout s'arrête. 
+	/* Vérifie si c'est la bonne version ACF ou si ACF est actif. 
+		 Dans le cas contraire tout s'arrête. 
+	*/
 	if ( ! function_exists('acf_register_block') )
 		return;
 	
-	// Enregistrement du bloc
+	//* Enregistrement du bloc
 	acf_register_block(array(
 		'name' => 'membre-equipe',
 		'title' => 'Membres de l\'équipe',
@@ -26,10 +29,20 @@ function acf_bloc_gutenberg_equipe() {
 }
 add_action('acf/init', 'acf_bloc_gutenberg_equipe');
 
-// Affichage du bloc
+
+
+/**
+ * Fonction de Callback pour l'affichage des blocs Gutenberg avec ACF
+ * 
+ * Appelée depuis la fonction acf_bloc_gutenberg_equipe()
+ *
+ * @package acf-bloc-membres
+ * @author Grégoire Noyelle
+ * @since 1.0.0
+ */
 function acf_bloc_gutenberg_equipe_callback() {
 	
-	// Variables
+	//* Variables ACF
 	$prenom = get_field('blocequipe_prenom');
 	$nom = get_field('blocequipe_nom');
 	$bio = get_field('blocequipe_bio');
@@ -40,7 +53,7 @@ function acf_bloc_gutenberg_equipe_callback() {
 	$back_color = get_field('blocequipe_arriere_plan');
 	$padding = get_field('blocequipe_marge_interne');
 
-	// Appel du fichier d'affichage
+	//* Appel du fichier pour l'affichage HTML
 	ob_start();
 	include plugin_dir_path(__DIR__) . 'view/view-bloc-equipe.php';
 	// Affichage et nettoyage de la mémoire tampon

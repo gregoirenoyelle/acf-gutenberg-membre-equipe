@@ -3,7 +3,7 @@
 Plugin Name: ACF Blocs Membre pour l'éditeur moderne
 Plugin URI: https://wwww.gregoirenoyelle.com
 Description: Exemple d'extension avec ACF pour l'éditeur moderne (Gutenberg).
-Version: 2.0
+Version: 1.0.0
 Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
 License: GPL2
@@ -20,10 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-/***
-* LIENS FICHIER PHP
-*/
-
-
-// Fichier de functions pour ACF
+/**
+ * Lien vers le fichier include
+ * 
+ * @package acf-bloc-membres
+ * @author Grégoire Noyelle
+ * @since 1.0.0
+ */
 include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-acf.php';

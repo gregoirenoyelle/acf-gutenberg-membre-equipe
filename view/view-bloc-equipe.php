@@ -1,6 +1,11 @@
 <?php
-// Affichage bloc equipes
-// Chargé depuis le fichier fonctions-acf.php
+/**
+ * Affichage du HTML dans le block
+ *
+ * @package acf-bloc-membres
+ * @author Grégoire Noyelle
+ * @since 1.0.0
+ */
 ?>
 <section class="membre-equipe" style="background-color:<?php echo esc_html($back_color); ?>; padding:<?php echo esc_html($padding); ?>rem;">
 	<h2><?php echo esc_html($prenom); ?> <?php echo esc_html($nom); ?></h2>

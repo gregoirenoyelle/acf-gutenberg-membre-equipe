@@ -21,10 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
- * Lien vers le fichier include
- * 
+ * Lien vers les fichiers include
+ *
  * @package acf-bloc-membres
  * @author Grégoire Noyelle
  * @since 1.0.0
  */
+include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-wordpress.php';
 include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-acf.php';
+

@@ -35,16 +35,17 @@ $boucle_temoignage = new WP_Query(
 	<?php
 	if ( $boucle_temoignage->have_posts() ) :
 	while ( $boucle_temoignage->have_posts() ) : $boucle_temoignage->the_post();
+		global $post;
 		// Données ACF
-		$texte = get_field('temoi_texte');
-		$profession = get_field('temoi_profession');
-		$lien = get_field('temoi_lien_avis');
+		$texte = get_field('temoi_texte', $post->ID);
+		$profession = get_field('temoi_profession', $post->ID);
+		$lien = get_field('temoi_lien_avis', $post->ID);
 	?>
 
 	<div class="temoignage">
 
 		<h2><?php echo get_the_title(); ?></h2>
-		<?php echo $texte; ?>
+		<p><?php echo $texte; ?></p>
 		<a href="<?php echo esc_html($lien); ?>">Lien vers le témoignage</a>
 
 	</div>

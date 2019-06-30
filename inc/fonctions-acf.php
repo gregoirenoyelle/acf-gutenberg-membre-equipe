@@ -44,7 +44,8 @@ function acf_bloc_gutenberg_temoignages_callback() {
 	//* Variables ACF
 	$type = get_field('bloc_temoi_type_temoignages');
 	$nombre = get_field('bloc_temoi_nombre_temoignages');
-	$lien = get_field('bloc_temoi_lien_bouton');
+	$lien_page = get_field('bloc_temoi_lien_bouton');
+	$texte_lien = get_field('bloc_temoi_texte_bouton');
 
 	//* Appel du fichier pour l'affichage HTML
 	ob_start();

@@ -39,14 +39,14 @@ $boucle_temoignage = new WP_Query(
 		// Données ACF
 		$texte = get_field('temoi_texte', $post->ID);
 		$profession = get_field('temoi_profession', $post->ID);
-		$lien = get_field('temoi_lien_avis', $post->ID);
+		$lien_avis = get_field('temoi_lien_avis', $post->ID);
 	?>
 
 	<div class="temoignage">
 
 		<h2><?php echo get_the_title(); ?></h2>
 		<p><?php echo $texte; ?></p>
-		<a href="<?php echo esc_html($lien); ?>">Lien vers le témoignage</a>
+		<a href="<?php echo esc_html($lien_avis); ?>">Lien vers le témoignage</a>
 
 	</div>
 	<?php endwhile; ?>
@@ -55,4 +55,10 @@ $boucle_temoignage = new WP_Query(
 		<p>Aucun témoignage par ici !</p>
 
 	<?php endif; ?>
+
+	<?php if ( $lien_page ) { ?>
+		<a class="button" href="<?php echo esc_url( $lien_page ); ?>"><?php echo esc_html( $texte_lien ); ?></a>
+	<?php } ?>
+
 </section>
+

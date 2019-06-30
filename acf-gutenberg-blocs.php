@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: ACF Blocs Membre pour l'éditeur moderne
+Plugin Name: ACF Blocs pour gncom7
 Plugin URI: https://wwww.gregoirenoyelle.com
-Description: Exemple d'extension avec ACF pour l'éditeur moderne (Gutenberg).
+Description: Blocs Gutenberg pour gncomv7
 Version: 1.0.0
 Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
@@ -27,6 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author Grégoire Noyelle
  * @since 1.0.0
  */
-include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-wordpress.php';
+// include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-wordpress.php';
 include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-acf.php';
 

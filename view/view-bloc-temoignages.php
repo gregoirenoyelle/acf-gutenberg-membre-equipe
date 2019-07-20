@@ -44,9 +44,9 @@ $boucle_temoignage = new WP_Query(
 
 	<div class="temoignage">
 
-		<h2><?php echo get_the_title(); ?></h2>
-		<p><?php echo $texte; ?></p>
-		<a href="<?php echo esc_html($lien_avis); ?>">Lien vers le témoignage</a>
+		<h2 class="titre-temoignage"><?php echo get_the_title(); ?></h2>
+		<p class="texte-temoignage"><?php echo $texte; ?></p>
+		<a href="<?php echo esc_html($lien_avis); ?>" target="_blank">Lien direct vers le témoignage</a>
 
 	</div>
 	<?php endwhile; ?>

@@ -1,4 +1,6 @@
-# Extension basique pour créer des bloc Gutenberg avec ACF
+# Bloc ACF de base pour la gncom v7 
+
+gnaction: faire plusieurs extensions basique pour regrouper par type les différents blocs. 
 
 
 ## Mise en garde

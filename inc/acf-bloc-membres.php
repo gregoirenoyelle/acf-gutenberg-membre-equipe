@@ -5,13 +5,18 @@
  * @package acf-bloc-membres
  * @author Grégoire Noyelle
  * @since 1.0.0
- * @link https://www.advancedcustomfields.com/resources/acf_register_block/
- * @link  https://www.advancedcustomfields.com/resources/acf_register_block_type/
+ * @link https://www.advancedcustomfields.com/resources/acf_register_block_type/
  */
+
+//* Ajouter un bloc
+add_action('acf/init', 'acf_bloc_gutenberg_equipe');
 function acf_bloc_gutenberg_equipe() {
 
+	/// Vérifie si la fonction ACF existe
+	if ( ! function_exists('acf_register_block_type') ) return;
+
 	//* Enregistrement du bloc
-	acf_register_block(array(
+	acf_register_block_type(array(
 		'name' => 'membre-equipe',
 		'title' => 'Membres de l\'équipe',
 		'render_callback' => 'acf_bloc_gutenberg_equipe_callback',
@@ -21,10 +26,6 @@ function acf_bloc_gutenberg_equipe() {
 		'post_types' => array('page'),
 		'keywords' => array('profile', 'user', 'author')
 	));
-}
-// Vérifie si la fonction ACF existe
-if ( function_exists('acf_register_block_type') ) {
-	add_action('acf/init', 'acf_bloc_gutenberg_equipe');
 }
 
 

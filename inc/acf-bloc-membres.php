@@ -23,7 +23,7 @@ function acf_bloc_gutenberg_equipe() {
 	));
 }
 // Vérifie si la fonction ACF existe
-if function_exists('acf_register_block_type') {
+if ( function_exists('acf_register_block_type') ) {
 	add_action('acf/init', 'acf_bloc_gutenberg_equipe');
 }
 

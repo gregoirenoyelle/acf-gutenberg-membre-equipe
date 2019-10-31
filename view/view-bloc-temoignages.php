@@ -45,11 +45,11 @@ $boucle_temoignage = new WP_Query(
 	<div class="temoignage">
 
 		<h2 class="titre-temoignage"><?php echo get_the_title(); ?></h2>
-		<p class="texte-temoignage"><?php echo $texte; ?></p>
+		<p class="texte-temoignage"><?php echo wp_kses_post($texte); ?></p>
 		<a href="<?php echo esc_html($lien_avis); ?>" target="_blank">Lien direct vers le témoignage</a>
 
 	</div>
-	<?php endwhile; ?>
+	<?php endwhile; wp_reset_postdata();?>
 	<?php else : ?>
 
 		<p>Aucun témoignage par ici !</p>

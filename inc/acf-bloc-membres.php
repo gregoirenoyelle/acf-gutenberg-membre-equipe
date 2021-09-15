@@ -2,7 +2,7 @@
 /**
  * Fonction pour la création de blocs Gutenberg avec ACF
  *
- * @package acf-bloc-membres
+ * @package acf-gutenberg-blocs
  * @author Grégoire Noyelle
  * @since 1.0.0
  * @link https://www.advancedcustomfields.com/resources/acf_register_block_type/

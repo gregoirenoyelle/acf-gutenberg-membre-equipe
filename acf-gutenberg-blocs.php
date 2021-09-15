@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Lien vers les fichiers include
  *
- * @package acf-bloc-membres
+ * @package acf-gutenberg-blocs
  * @author Grégoire Noyelle
  * @since 1.0.0
  */

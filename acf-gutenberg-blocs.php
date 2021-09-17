@@ -28,5 +28,5 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 include_once plugin_dir_path( __FILE__ ) . 'inc/fonctions-wordpress.php';
+include_once plugin_dir_path( __FILE__ ) . 'inc/fonction-enqueue.php';
 include_once plugin_dir_path( __FILE__ ) . 'inc/acf-bloc-membres.php';
-
